@@ -32,15 +32,15 @@ def change_board(row,column,user_b):
 #evaluates whether it is a oair or not          
 def play():
     print_board(user_board)
-    coordenates1= input("Enter ypur coordenates row,clumn separeted by ',' \n")
+    coordenates1= input("Enter your coordenates row,column separeted by ',' \n")
     coordenates1=coordenates1.split(",")
     value1=change_board(int(coordenates1[0]),int(coordenates1[1]),user_board)
-    coordenates2= input("Enter ypur coordenates row,clumn separeted by ',' \n")
+    coordenates2= input("Enter yur coordenates row,column separeted by ',' \n")
     coordenates2=coordenates2.split(",")
     value2=change_board(int(coordenates2[0]),int(coordenates2[1]),user_board)
     
     if value1==value2:
-        print(" You have found a pair!")
+        print("You have found a pair!\n")
         return "pair"
     else: 
         print("You failed \n")
@@ -78,17 +78,17 @@ for i in range (2):
 player1=0
 player2=0
    
-while player1+player2 !=5:
+while player1+player2 !=number_pairs:
     #player 1 turn 
     print("Player 1 plays \n")
     result=play()
     while result!= "fail":
         player1+=1
-        if player1+player2==5:
+        if player1+player2==number_pairs:
             break
         print("Player 1 plays again")
         result=play()
-    if player1 +player2==5:
+    if player1 +player2==number_pairs:
         break
     
     #player 2 turn
@@ -96,7 +96,7 @@ while player1+player2 !=5:
     result=play()
     while result!= "fail":
         player2+=1
-        if player1+player2==5:
+        if player1+player2==number_pairs:
             break
         print("Player 2 plays again")
         result=play()
