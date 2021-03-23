@@ -35,7 +35,7 @@ def play():
     coordenates1= input("Enter your coordenates row,column separeted by ',' \n")
     coordenates1=coordenates1.split(",")
     value1=change_board(int(coordenates1[0]),int(coordenates1[1]),user_board)
-    coordenates2= input("Enter yur coordenates row,column separeted by ',' \n")
+    coordenates2= input("Enter your coordenates row,column separeted by ',' \n")
     coordenates2=coordenates2.split(",")
     value2=change_board(int(coordenates2[0]),int(coordenates2[1]),user_board)
     
